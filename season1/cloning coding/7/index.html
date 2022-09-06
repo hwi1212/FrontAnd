@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>:target 가상클래스 탭 메뉴 콘텐츠</title>
+    <!--script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/eb6caddf9d.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tab-inner">
+        <div class="tab-btn">
+            <a href="#tab1" class="active"><i class="bi bi-emoji-smile-fill"></i> london</a>
+            <a href="#tab2"><i class="bi bi-chat-dots-fill"></i> paris</a>
+            <a href="#tab3"><i class="bi bi-camera-fill"></i> new york</a>
+            <a href="#tab4"><i class="bi bi-heart-fill"></i> dubai</a>
+        </div>
+        <div class="tab-content">
+            <div id="tab1" class="tab">
+                <h2>london</h2>
+                <p>
+                    As the “capital of capitals”—still waist-deep in an opaque pandemic slurry—negotiates the uncharted,
+                    perilous
+                    terrain of a post-Brexit world, London continues to reign the planet’s best cities for the sixth
+                    year running.
+                    Its position at the top, however, has never been more tenuous.
+                </p>
+                <img src="images/city-01.jpg" alt="">
+            </div>
+            <div id="tab2" class="tab">
+                <h2>paris</h2>
+                <p>
+                    Paris attacked the pandemic not only with its doctors and health-care workers, but also with its
+                    urban
+                    planners. For all the talk of learning from the pandemic, one city appears to be going all-in on the
+                    hard
+                    lessons it gave and their application to molecular urban change.
+                </p>
+                <img src="images/city-02.jpg" alt="">
+            </div>
+            <div id="tab3" class="tab">
+                <h2>new york</h2>
+                <p>
+                    If New York City forgot about how bad life can get for its citizenry, the past 18 months were a
+                    hellish
+                    reminder. The greatest city in America—lauded and crowned in our ranking for the past six years and
+                    in
+                    countless others for many more—was a ghastly reminder during the pandemic.
+                </p>
+                <img src="images/city-03.jpg" alt="">
+            </div>
+            <div id="tab4" class="tab">
+                <h2>dubai</h2>
+                <p>
+                    An alluring blend of over-the-top experiences, Arab heritage and luxury shopping, Dubai is so over
+                    the
+                    pandemic. Dubai is a city of superlatives: you can ride the elevator to the top of the world’s
+                    tallest
+                    building for a bird’s-eye view, bet on the ponies at the world’s richest.
+                </p>
+                <img src="images/city-04.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.tab-btn a').click(function(){
+            $(this).addClass('active')
+            $(this).siblings('.tab-btn a').removeClass('active')
+        })
+    </script>
+</body>
+
+</html>

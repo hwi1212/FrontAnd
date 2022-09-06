@@ -1,0 +1,60 @@
+/* Google Web Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+}
+
+/* navi */
+.navi {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    padding:0;
+    margin:0;
+    z-index: 999;
+}
+.navi li {
+    margin:20px 0;
+}
+.navi li a {
+    text-decoration: none;
+    color:#fff;
+    font-size:4em;
+    position: relative;
+    font-weight: bold;
+}
+.navi li a::before{
+    content: attr(data-text);
+    color:yellowgreen;
+    position:absolute;
+    /* top:0;
+    left:0; */
+    width: 0;
+    overflow: hidden;
+    transition: 0.7s;
+     /* before의 기본값은 wrap인데 nowrap를 주면 띄어쓰기 있어도 줄이 바뀌지않음 (한글로 메뉴 이름 적었을때 줄이 바뀌는 현상 방지 */
+    white-space: nowrap 
+}
+.navi li a:hover::before {
+    width:100%;
+}
+
+/* photo */
+.photo {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 자바스크립트에서 이미지 링크만 변경하기 위해서 단독속성 사용 */
+    background-image: url(images/portrait-initial.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: 0.7s;
+}

@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.tab-inner {
+    width: 300px;
+    height: 350px;
+    border: 1px solid red;
+    position:relative;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.content {
+    /* display: none; */
+    position:absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden; 
+    /* opacity만 주면 눈에만 보이지 않을뿐 슬라이드3이 계속 떠있음,
+        그래서 visibility: hidden 값까지 줘야함 (존재 자체는 사라지되 자신의 자리값 유지)
+    */
+    transition: 0.8s;
+}
+.btn {
+    position:absolute;
+    bottom:15px;
+    /* border: 1px solid black; */
+    width:100%;
+    text-align: center;
+}
+.btn label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[id=tab1]:checked ~ .slide1,
+input[id=tab2]:checked ~.slide2,
+input[id=tab3]:checked ~.slide3 {    
+    opacity: 1;
+    visibility: visible;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background-color: crimson;
+}

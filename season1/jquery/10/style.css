@@ -1,0 +1,35 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+
+body {
+  background-color: pink;
+  margin: 0;
+}
+.myslider {
+    width: 800px;
+    margin: auto;
+}
+.myslider div{
+    border: 1px solid #000;
+    background-color: #ddd;
+    height: 300px;
+    font-size:30px;
+}
+
+.myslider .slick-arrow {
+    border: 1px solid #000;
+    display: none !important; /*slick-theme에 있는 .slick-arrow css가 우선순위라서*/
+}
+.myslider .slick-dots {
+    
+}
+
+@media (max-width: 768px) {
+    .myslider {
+        width: 100%;
+    }
+}

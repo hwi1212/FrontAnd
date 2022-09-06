@@ -1,0 +1,54 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+}
+body {
+    background-color: #222;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:0 auto;
+}
+.btn {
+    text-decoration: none;
+    color:transparent;
+    font-size: 10em;
+    font-weight: 600;
+    -webkit-text-stroke: 1px #fff;
+    position: relative;
+    transition: 0.3s;
+}
+.btn::before,
+.btn::after {
+    content: attr(data-text);
+    -webkit-text-stroke:1px transparent;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.btn::before {
+    color:royalblue;
+}
+.btn::after {
+    color:crimson;
+}
+
+/* hover effect*/
+.btn:hover {
+    color:#fff;
+}
+.btn:hover::before {
+    opacity: 1;
+    transform: translate(10px, -10px);
+}
+.btn:hover::after {
+    opacity: 1;
+    transform: translate(20px, -20px);
+}

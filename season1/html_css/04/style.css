@@ -1,0 +1,43 @@
+body {
+    color:#222;
+    line-height:1.5em;
+}
+a {
+    color:#222;
+    text-decoration: none;
+}
+.dropdown {
+    width: 200px;
+    
+}
+.dropdown-btn {
+    width: inherit;
+    padding: 10px;
+    font-size:18px;
+    background-color: yellowgreen;
+    color:#fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.dropdown-submenu {
+    width: inherit;
+    box-shadow: 0 0 10px rgba(0,0,0,0.17);
+    opacity: 0;
+    /* display: none; */
+    transition: 0.5s;
+}
+.dropdown:hover .dropdown-submenu{ 
+    /* display: block; */
+    /* transition을 넣고싶으면 display가 아닌 opactiy를 사용해야함  */
+    opacity: 1;
+}
+.dropdown-submenu a {
+    display: block;
+    padding: 7px;
+    text-align: center;
+    transition:0.5s;
+}
+.dropdown-submenu a:hover {
+    background-color: #eee;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The World's Ocean</title>
+    <!--script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="video-frame">
+            <video src="images/video-female.mp4" autoplay muted loop poster="images/placeholder-female.jpg"></video>
+        </div>
+        <audio id="myAudio" src="images/piano-bgm.mp3" autoplay loop></audio>
+        <!--video-frame-->
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <div class="heading">
+            <h1><span>Wave Ocean</span> The World's Ocean</h1>
+            <p>
+                The Atlantic Ocean is situated between the Americas and European/African continents. Atlantic Ocean is
+                the second largest and saltiest ocean in the world. It resembles an S-shape between the Americas, Europe
+                and Africa. “Atlantic” originated from the Greek god “Atlas” who carried the sky for eternity.
+            </p>
+            <a class="btn-book" href="#none">Book Now</a>
+            <a class="btn-learn" href="#none">Learn More</a>
+        </div>
+        <!--heading-->
+        <div class="anniversary">
+            <em>Anniversary</em><span>60</span>
+        </div>
+        <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!--trigger-->
+        <div class="modal-gnb">
+            <div class="gnb">
+                <a href="#none">Attractions</a>
+                <a href="#none">Hotels & Spa</a>
+                <a href="#none">Shop & Dine</a>
+                <a href="#none">Celebrate</a>
+                <a href="#none">Promotions</a>
+            </div>
+        </div>
+    </div>
+    <!--container-->
+
+    <script>
+        // Trigger
+        $('.trigger').click(function(){
+            $(this).toggleClass('active')
+            $('.modal-gnb').fadeToggle()
+        })
+
+        //Audio Controls
+        var bgm = document.getElementById('myAudio')
+        bgm.volume = 0.2 // Audio Volume : 0~1
+    </script>
+</body>
+</html>

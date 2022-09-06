@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3타입 상단 네비게이션</title>
+    <style>
+        /* Google Web Font */
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Pretendard','Noto Sans KR', sans-serif;
+            margin:0;
+            color:#222;
+            line-height: 1.5em;
+            font-size: 15px;
+            background-color: #eee;
+        }
+        a {
+            text-decoration: none;
+            color:#222;
+        }
+        /* Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.15);
+        }
+        nav {
+            width: 1100px;
+            margin: auto;
+        }
+        nav > div{
+            height: 70px;
+            line-height: 70px;
+        }
+        .logo {
+            float: left;
+            width: 180px;
+        }
+        .logo img{
+            vertical-align:middle;	
+        }
+        .gnb {
+            width: calc(100% - 280px);
+            display: inline-block; /* 이렇게 해도 되고 html 구조에서 lnb를 gnb 위로 옮기면 됨*/
+            text-align: center;
+        }
+        .gnb a {
+            margin:10px;
+        }
+        .lnb {
+            float: right;
+            /* margin-top:-70px; 야매로 이렇게 할수도 있긴함 */
+            width: 100px;
+            text-align: center;
+        }
+        .lnb a{
+            background-color: green;
+            color:#fff;
+            border-radius:30px;
+            padding:3px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#none"><img src="logo.png" alt="로고"></a>
+                </div>
+                <div class="gnb">
+                    <a href="#none">강의목록</a>
+                    <a href="#none">로드맵</a>
+                    <a href="#none">강의신청</a>
+                    <a href="#none">퍼블리싱 스토리</a>
+                    <a href="#none">커뮤니티</a>
+                </div>
+                <div class="lnb">
+                    <a href="#none">로그인</a>
+                </div>
+            </nav>
+        </header>
+    </div>
+</body>
+
+</html>

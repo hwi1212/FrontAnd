@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트 사이즈</title>
+    <style>
+        /* Google Web Font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        
+        html {
+            font-size:20px;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .box-em { /* 부모 요소를 기준으로 */
+            font-size:20px;
+        }
+        .box-em h1{
+            font-size:20px;
+        }
+        .box-em p{
+            font-size:0.8em;
+            line-height: 1.5em;
+        }
+
+        /* 제일 상위 값 기준 html이라는 root 기준 / 반응형에서 많이 씀 */
+        .box-rem {
+            font-size:40px;
+        }
+        .box-rem p {
+            font-size:0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>폰트사이즈</h1>
+        <p>px | em | rem</p>
+    </header>
+    <section>
+        <div class="box-em"> 
+            <h1>em</h1>
+            <p>
+                그들의 그러므로 시들어 있다. 발휘하기 두기 얼마나 청춘에서만 부패뿐이다. 곳이 방황하였으며, 뛰노는 인류의 이것은 아름다우냐? 있는 온갖 들어 이상의 용기가 때문이다. 이상, 두손을 무엇을 피다. 전인 뛰노는 우리의 얼음에 구하지 끓는다. 천고에 것은 인간의 때문이다. 기관과 미묘한 그들은 봄바람이다. 산야에 두기 풀이 가슴에 영원히 교향악이다. 가치를 있는 그림자는 열락의 피다.
+            </p>
+        </div>
+        <div class="box-rem">
+            <h1>rem</h1>
+            <p>
+                그들의 그러므로 시들어 있다. 발휘하기 두기 얼마나 청춘에서만 부패뿐이다. 곳이 방황하였으며, 뛰노는 인류의 이것은 아름다우냐? 있는 온갖 들어 이상의 용기가 때문이다. 이상, 두손을 무엇을 피다. 전인 뛰노는 우리의 얼음에 구하지 끓는다. 천고에 것은 인간의 때문이다. 기관과 미묘한 그들은 봄바람이다. 산야에 두기 풀이 가슴에 영원히 교향악이다. 가치를 있는 그림자는 열락의 피다.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

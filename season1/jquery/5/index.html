@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <ul class="navi">
+            <!--ata-image는 자바스크립트에서 사용,data-text는 css에서 사용했음-->
+            <li><a href="#none" data-text="회사소개" data-image="images/portrait-01.jpg">회사소개</a></li>
+            <li><a href="#none" data-text="INSTRUCTOR" data-image="images/portrait-02.jpg">INSTRUCTOR</a></li>
+            <li><a href="#none" data-text="CLASS" data-image="images/portrait-03.jpg">CLASS</a></li>
+            <li><a href="#none" data-text="LOCATION" data-image="images/portrait-04.jpg">LOCATION</a></li>
+        </ul>
+        <div class="photo"></div>
+    </div>
+
+    <script>
+        $('.navi li a').mouseenter(function() {
+            var changeImage = $(this).attr('data-image')
+            $('.photo').css({
+                'background-image': 'url('+ changeImage +')'
+            })
+        })
+        $('.navi li a').mouseleave(function(){
+            $('.photo').css({
+                'background-image': ''
+            })
+        })
+    </script>
+</body>
+</html>

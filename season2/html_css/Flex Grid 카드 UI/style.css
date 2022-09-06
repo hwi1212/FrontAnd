@@ -1,0 +1,114 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+  box-sizing: border-box;
+}
+body {
+  color:#222;
+  margin:0;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+section {
+  height: 100vh;
+  position: relative;
+}
+.inner {
+  width: 1100px;
+  margin:auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.heading {
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  padding-bottom:50px;
+}
+.heading::after {
+  content: '';
+  position:absolute;
+  height: 3px;
+  width: 100px;
+  background-color: crimson;
+  bottom:0;
+  left:50%;
+  transform: translateY(-50%);
+}
+
+/* Item */
+.items {
+  text-align: center;
+}
+.item {
+  width: 350px;
+  display: inline-block;
+  margin:5px;
+  background-color: #f4f4f4;
+  padding:20px;
+  text-align: left;
+  vertical-align: top;
+  border-radius: 5px;
+}
+.item h2 {
+  font-weight: 500;
+} 
+.item p {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+/* Photo */
+.photo {
+  overflow: hidden;
+  border-radius:5px;
+  height: 220px;
+}
+.photo img {
+  height: 100%;
+  transition: 0.5s;
+}
+.user img {
+  width: 40px;
+  border-radius: 50%;
+}
+.item:hover .photo img{
+  transform: scale(1.1);
+} 
+/* User info  */
+.user-info {
+
+}
+.user-info span{
+  /* border: 1px solid #000; */
+  display: inline-block;
+  width: 49%;
+}
+.comment {
+  text-align: right;
+}
+.user img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+/* Btn */
+.btn-explore {
+  background-color: dodgerblue;
+  color:#fff;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding:5px;
+  border-radius: 3px;
+  margin-top:10px;
+}

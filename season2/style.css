@@ -1,0 +1,16 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+  box-sizing: border-box;
+}
+body {
+  color:#222;
+  margin:0;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}

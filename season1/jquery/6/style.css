@@ -1,0 +1,161 @@
+/* Google Web Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  height: 100vh;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+/* item */
+.item {
+    border-radius: 10px;
+    overflow: hidden; /* 이미지 부분이 넘쳐서*/
+    position:relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+.item img {
+    transition: 0.5s;
+}
+
+/* detail */
+.detail {
+    background-color: #f8f8f8;
+    position:absolute;
+    width: 100%;
+    left:0;
+    bottom:-174px;
+    height: 53%;
+    transition: 0.5s;
+    padding:5px 15px;
+    box-sizing: border-box;
+}
+.item:hover .detail {
+    bottom:0;
+}
+.item:hover img {
+    filter: blur(1.2px);
+}
+
+/* title */
+.title {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;    
+    margin-bottom:15px;
+}
+.title h2 {
+    font-size:16px;
+    color:#888;
+    line-height: 1.3em;
+    float: left;
+}
+.title h2 em{
+    font-style: normal;
+    display: block;
+    color:#000;
+    font-weight: 500;
+}
+.title span {
+    float: right;
+    margin-top:15px;
+    color:crimson;
+    font-weight: 500;
+}
+.info {
+    position:relative;
+}
+/* Size&Color */
+.size {
+    margin-bottom:8px;
+}
+.size label,
+.color label {
+    display: block;
+    font-weight: 500;
+    margin-bottom:5px;
+    font-size:15px;
+}
+.size span,
+.color span {
+    transition: 0.5s;
+}
+.size span {
+    font-size:12px;
+    display: inline-block;
+    text-align: center;
+    line-height: 15px;
+    padding:3px;
+    border-radius: 3px;
+    margin-right:5px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.size span.active,
+.size span:hover {
+    background-color: #000;
+    color:#fff;
+}
+.color span {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right:10px;
+    cursor: pointer;
+}
+.color span.active {
+    border-radius: 50%;
+}
+/* nth-child를 사용하면 label부터 체크해서 span이 2부터 시작함
+   nth-of-type은 태그 type을 찾아서 순서를 매기는거라서 span부터 인덱스가 시작함 */
+.color span:nth-of-type(1) { 
+    background-color: #808000;
+}
+.color span:nth-of-type(2) {
+    background-color: #ff0000;
+}
+.color span:nth-of-type(3) {
+    background-color: #ffc0cb;
+}
+.color span:nth-of-type(4) {
+    background-color: #00ffff;
+}
+.color span:nth-of-type(5) {
+    background-color: #0000ff;
+}
+
+/* Button */
+.add-cart {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding:7px;
+    background-color:#fff;
+    cursor: pointer;
+    margin-top:10px;
+}
+.add-cart:hover {
+    background-color: #111;
+    color:#fff;
+}
+
+/* Like */
+.like::before {
+    content: '\f08a';
+    font-family: fontawesome;
+    color:#bbb;
+    position:absolute;
+    top:0;
+    right:0;
+    cursor: pointer;
+}
+.like.active::before {
+    content: '\f004';
+    color:crimson;
+}

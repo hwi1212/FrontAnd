@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴 콘텐츠 - 스타일 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="testimonial-section">
+        <h1><span>CodingWorks</span> Publishing Online Class with Inflearn</h1>
+        <div class="testimonial-pic">
+            <img class="active" src="images/face-01.jpg" alt="이미지1" data-alt="tab1">
+            <img src="images/face-02.jpg" alt="이미지2" data-alt="tab2"> 
+            <img src="images/face-03.jpg" alt="이미지3" data-alt="tab3">
+            <img src="images/face-04.jpg" alt="이미지4" data-alt="tab4">
+        </div>
+        <div class="testimonial">
+            <div class="content active" id="tab1">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, illum architecto! Velit, assumenda ipsam culpa nemo similique delectus dolor! Sit impedit eum doloribus dolorum deserunt beatae facilis, ut voluptatum illo quia laboriosam error magnam animi officia vel quidem quas nesciunt sequi amet saepe enim omnis voluptas. Minus corrupti fuga ad quisquam iste nihil temporibus eos reiciendis, tempore quam autem consequuntur inventore delectus amet, id eius molestias mollitia vitae vero. Molestias nisi labore, assumenda nam voluptatum ratione commodi consequatur soluta repellat?</p>
+                <p>Sally, Web Desginer</p>
+            </div>
+            <div class="content" id="tab2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, illum architecto! Velit, assumenda ipsam culpa nemo similique delectus dolor! Sit impedit eum doloribus dolorum deserunt beatae facilis, ut voluptatum illo quia laboriosam error magnam animi officia vel quidem quas nesciunt sequi amet saepe enim omnis voluptas. Minus corrupti fuga ad quisquam iste nihil temporibus eos reiciendis, tempore quam autem consequuntur inventore delectus amet, id eius molestias mollitia vitae vero. Molestias nisi labore, assumenda nam voluptatum ratione commodi consequatur soluta repellat?</p>
+                <p>Amy, Graphic Designer</p>
+            </div>
+            <div class="content" id="tab3">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, illum architecto! Velit, assumenda ipsam culpa nemo similique delectus dolor! Sit impedit eum doloribus dolorum deserunt beatae facilis, ut voluptatum illo quia laboriosam error magnam animi officia vel quidem quas nesciunt sequi amet saepe enim omnis voluptas. Minus corrupti fuga ad quisquam iste nihil temporibus eos reiciendis, tempore quam autem consequuntur inventore delectus amet, id eius molestias mollitia vitae vero. Molestias nisi labore, assumenda nam voluptatum ratione commodi consequatur soluta repellat?</p>
+                <p>Jung Ho, Developer</p>
+            </div>
+            <div class="content" id="tab4">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, illum architecto! Velit, assumenda ipsam culpa nemo similique delectus dolor! Sit impedit eum doloribus dolorum deserunt beatae facilis, ut voluptatum illo quia laboriosam error magnam animi officia vel quidem quas nesciunt sequi amet saepe enim omnis voluptas. Minus corrupti fuga ad quisquam iste nihil temporibus eos reiciendis, tempore quam autem consequuntur inventore delectus amet, id eius molestias mollitia vitae vero. Molestias nisi labore, assumenda nam voluptatum ratione commodi consequatur soluta repellat?</p>
+                <p>Chris, Printing Desinger</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.testimonial-pic img').click(function(){
+            // 이미지 영역 스크립트
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+            
+            //content 가 크로스페이드로 트랜지션 되는 효과
+            $('.testimonial .content').fadeOut() /* .content 나타날 때 다른 .content 서서히 사라지기 */
+            $('#' + $(this).attr('data-alt')).fadeIn() /* .content 나타날 때 서서히 보이기 */
+            
+            // 이미지랑 텍스트 연결 스크립트
+            $('.testimonial .content').removeClass('active')
+            $('#' + $(this).attr('data-alt')).addClass('active')
+        })
+    </script>
+</body>
+</html>

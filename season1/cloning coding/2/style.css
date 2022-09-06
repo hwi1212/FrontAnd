@@ -1,0 +1,61 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  left: 1.6em;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.faq {
+    height: 100vh;
+    background-color: #FFEB60;
+}
+.faq-inner {
+    width:750px;
+    margin: auto;
+}
+.faq-inner h1 {
+    margin-top:0;
+    text-align: center;
+    padding-top:50px;
+}
+.accordion {
+
+}
+.accordion-item {
+    background-color: #fff;
+    padding:15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+    margin-bottom:17px;
+}
+.accordion-item .title {
+    font-weight: bold;
+    cursor: pointer;
+}
+.accordion-item .title::after {
+    content: '\f107';
+    font-family: fontawesome;
+    float:right;
+    margin-top:4px;
+}
+.accordion-item .title.active {
+    padding-bottom: 15px;
+}
+.accordion-item .title.active::after {
+    transform: rotateX(180deg);
+}
+.accordion-item .content {
+    border-top:1px solid #000;
+    font-size: 16px;
+    padding-top:15px;
+    display: none;
+    cursor: pointer;
+}

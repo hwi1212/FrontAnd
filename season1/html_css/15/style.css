@@ -1,0 +1,60 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.skill-progress {
+    /* border: 1px solid red; */
+    width: 500px;
+    padding:20px;
+    padding-bottom:30px;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.skill-progress h1 {
+    text-align: center;
+    margin-bottom:50px;
+    font-size: 40px;
+    font-weight: normal;
+}
+.item {
+    
+}
+.item p {
+    overflow: hidden; /* 자식 요소에 float 속성이 들어가서 잃어버린 높이값 잡아줌*/
+    /* border: 1px solid #fff; */
+    margin-bottom:6px;
+}
+.item p span {
+
+}
+.item p span:nth-child(1) {
+    float: left;
+}
+.item p span:nth-child(2) {
+    float: right;
+}
+.progress {
+    border: 1px solid blanchedalmond;
+    padding:5px;
+   border-radius: 3px;
+}
+.progress-level {
+    height: 10px;
+    background: linear-gradient(to right, #fa709a, #fee140); /* 방향, 시작색상, 종료색상 */
+    animation: ani 1s;
+}
+
+@keyframes ani {
+    0% {
+        width:0;
+    }
+}

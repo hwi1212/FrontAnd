@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>커스텀 체크박스 로그인 폼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="login">
+        <h1>Login Accounts</h1>
+        <span class="field">user email</span>
+        <input type="email" placeholder="Type your email">
+        <span class="field">user password</span>
+        <input type="password" placeholder="Type your password">
+        <div class="save-info">
+            <label>
+                <input type="checkbox" id="save-email"><em></em>Save your email
+            </label>
+            <a href="#none">forgot password?</a>
+        </div>
+        <div class="event-info">
+            Would you like to receive event emails?
+            <div class="custom-checkbox">
+                <label>
+                    <input type="radio" name="event" checked><em></em> Yes
+                </label>
+                <label>
+                    <input type="radio" name="event"><em></em> No
+                </label>
+            </div>
+        </div>
+        <input type="button" value="login">
+        <div class="sns-info">
+            Or Login using
+            <div class="sns">
+                <a href="#none"><i class="xi-google"></i></a>
+                <a href="#none"><i class="xi-facebook"></i></a>
+                <a href="#none"><i class="xi-naver"></i></a>
+                <a href="#none"><i class="xi-kakaotalk"></i></a>
+            </div>
+        </div>
+        <div class="signup-info">
+            <span>Have not account yet?</span>
+            <a href="#none">sign up</a>
+        </div>
+    </form>
+</body>
+</html>

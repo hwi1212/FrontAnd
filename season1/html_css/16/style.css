@@ -1,0 +1,88 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.gallery {
+    list-style: none;
+    padding:0;
+    margin:0;
+    display: flex;
+    height: 100vh;
+}
+.gallery li {
+    border-right:5px solid #000;
+    flex:1;
+    transition:0.5s;
+    position:relative; /* 텍스트 박스의 부모 요소*/
+    overflow: hidden; /* 처음에 넘쳐있는 텍스트 박스 가리기용*/
+}
+.gallery li:last-child {
+    border-right: none;
+}
+.gallery li:nth-child(1) {
+    background: url(images/artistic-image-01.jpg) no-repeat center center;
+}
+.gallery li:nth-child(2) {
+    background: url(images/artistic-image-02.jpg) no-repeat center center;
+}
+.gallery li:nth-child(3) {
+    background: url(images/artistic-image-03.jpg) no-repeat center center;
+}
+.gallery li:nth-child(4) {
+    background: url(images/artistic-image-04.jpg) no-repeat center center;
+}
+.gallery li:nth-child(5) {
+    background: url(images/artistic-image-05.jpg) no-repeat center center;
+}
+
+.gallery:hover li {
+    flex: 1;
+}
+.gallery li:hover {
+    flex:3;
+    filter:grayscale(1); /* 0 ~ 1까지 IE에서는 작동 안해서 잘 사용 안함 */
+}
+
+/* 마우스 올렸을때 나타나는 텍스트 박스 영역*/
+
+.content {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    height: 250px;
+    bottom: -320px;
+    transition: 0.5s;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    width: 100%;
+}
+.content::before {
+    content: '';
+    position:absolute;
+    left:0;
+    top: 10px;
+    background-color:#000;
+    width: 100%;
+    height: 35px;
+    transform-origin: left bottom; /* 왼쪽 하단을 중심축으로 기울어짐*/
+    transform: rotate(-3deg) scale(1.3);
+}
+.sns a {
+    color:#333;
+}
+.gallery li:hover .content {
+    bottom:0;
+    transition-delay: 0.5s; /* li에 마우스를 올린 후 0.5초 뒤에 나타나게 딜레이*/
+}

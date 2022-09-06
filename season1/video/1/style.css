@@ -1,0 +1,232 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('http://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Default CSS */
+body {
+  margin: 0;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+
+/* BG Video */
+.video-frame::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background:linear-gradient(-135deg, crimson,transparent);
+}
+.video-frame video {
+    position:fixed;
+    min-width:100%;    /* 영상이 작아도 가득 찰 수 있게 */
+    min-height: 100%; /* 영상이 작아도 가득 찰 수 있게 */
+    z-index: -1;
+}
+
+/* Logo */
+.logo {
+    position:absolute;
+    top:50px;
+    left: 100px;
+}
+
+/* Heading */
+.heading {
+    position: absolute;
+    left:100px;
+    bottom:100px;
+    width:700px;
+    animation: showing1 2s 1s linear; /* 2s는 속도 1s 는 딜레이*/
+    /* 애니메이션은 0->1 로 갔다가 다시 1->0으로 가는데
+    그걸 가지 않게 잡아줌*/
+    animation-fill-mode: both;
+}
+.heading h1 {
+    font-size: 60px;
+    margin:0;
+}
+.heading h1 span {
+    display: block;
+    color:crimson;
+}
+.heading p {
+    font-size:1.2em;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+.btn-book, .btn-learn {
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    color:#222;
+    text-transform: uppercase;
+    width:150px;
+    padding:7px;
+    border-radius: 20px;
+    margin-right: 5px;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+.btn-learn {
+    background-color: transparent;
+    color:#fff;
+    border: 2px solid #fff;
+}
+.btn-book:hover {
+    background-color: #000;
+    color:#fff;
+    border-color:#000;
+}
+.btn-learn:hover {
+    background-color: #fff;
+    color:#222;
+    border: 2px solid #fff;
+}
+
+/* Anniversary */
+.anniversary {
+    position:absolute;
+    right:100px;
+    bottom:50px;
+    color:#000;
+    text-align: center;
+    animation: showing2 2s 1s linear; 
+    animation-fill-mode: both;
+}
+.anniversary em{
+    display: block;
+    font-style: normal;
+    font-size:30px;
+    letter-spacing: 5px;
+    margin-bottom:-20px;
+}
+.anniversary span{
+    font-family: 'Monoton', sans-serif;
+    font-size:150px;
+}
+
+@keyframes showing1 {
+    0% {
+        opacity: 0;
+        margin-left:-100px;
+    }
+    100% {
+        opacity: 1;
+        margin-left:100px;
+    }
+}
+@keyframes showing2 {
+    0% {
+        opacity: 0;
+        margin-right:-100px;
+    }
+    100% {
+        opacity: 1;
+        margin-right:0;
+    }
+}
+
+/* Trigger */
+.trigger {
+    width:40px;
+    height: 20px;
+    position:absolute;
+    top:50px;
+    right:50px;
+    cursor: pointer;
+    z-index: 100;
+}
+.trigger span {
+    position:absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.5s;
+}
+.trigger span:nth-child(1) {
+    top:0;
+}
+.trigger span:nth-child(2) {
+    top:50%;
+    width: 80%;
+}
+.trigger span:nth-child(3) {
+    top:100%;
+}
+.trigger.active span {
+    background-color: #fff;
+}
+.trigger.active span:nth-child(1) {
+    top:50%; /* 중앙으로 내려보낸다음에 돌려야함 */
+    transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+    opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+    top:50%; /* 중앙으로 내려보낸다음에 돌려야함 */
+    transform: rotate(-45deg);
+}
+
+/* Modal-gnb */
+.modal-gnb {
+    position:absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.gnb {
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.gnb a {
+    color:#fff;
+    font-size:60px;
+    display: block;
+    padding:10px;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.3s;
+    animation: gnb 0.5s linear;
+    animation-fill-mode: both;
+}
+.gnb a:hover {
+    color:crimson;
+}
+.gnb a:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.gnb a:nth-child(2) {
+    animation-delay: 0.7s;
+}
+.gnb a:nth-child(3) {
+    animation-delay: 0.9s;
+}
+.gnb a:nth-child(4) {
+    animation-delay: 1.1s;
+}
+.gnb a:nth-child(5) {
+    animation-delay: 1.3s;
+}
+@keyframes gnb {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {  
+        opacity: 1;
+        transform: translate(0);
+    }
+}

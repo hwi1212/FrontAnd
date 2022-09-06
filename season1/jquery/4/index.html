@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴 콘텐츠 - 프로토타입</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="heading">
+            <h1><span>코딩웍스</span>, 프론트엔드 퍼블리셔 취업을 위한 실전 퍼블리싱 강좌</h1>
+            <input type="text" placeholder="What are you looking for?">
+        </div> <!--heading-->
+        <div class="tab-inner">
+            <ul class="btn">
+                <li data-alt="tab1" class="active">HTML5</li>
+                <li data-alt="tab2">CSS3</li>
+                <li data-alt="tab3">JQUERY</li>
+                <li data-alt="tab4">JAVASCRIPT</li>
+                <li data-alt="tab5">CSS FRAMEWORKS</li>
+            </ul>
+            <div class="tabs">
+                <div id="tab1" class="active">
+                    <h2>HTML5</h2>
+                    <img src="images/platform-logo-01.png" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, esse saepe incidunt tenetur praesentium iusto unde porro obcaecati aliquam, odit illo recusandae ullam necessitatibus vero similique reprehenderit quas quod repellendus laudantium dolore totam dignissimos hic. Fuga reprehenderit, hic cumque assumenda vel tempore officia iure corrupti nobis illo laudantium autem a quisquam. Autem optio veritatis nihil saepe esse accusantium hic totam aut ipsa commodi labore, debitis sint neque temporibus nesciunt illum sapiente repudiandae aliquid. Cupiditate quis, iste sit veniam mollitia in nobis, quod tenetur labore aliquid maiores, cum repellat quo. Asperiores eveniet sunt repudiandae ab eaque tempora blanditiis quaerat necessitatibus error.
+                    </p>
+                </div>
+                <div id="tab2">
+                    <h2>CSS3</h2>
+                    <img src="images/platform-logo-02.png" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, esse saepe incidunt tenetur praesentium iusto unde porro obcaecati aliquam, odit illo recusandae ullam necessitatibus vero similique reprehenderit quas quod repellendus laudantium dolore totam dignissimos hic. Fuga reprehenderit, hic cumque assumenda vel tempore officia iure corrupti nobis illo laudantium autem a quisquam. Autem optio veritatis nihil saepe esse accusantium hic totam aut ipsa commodi labore, debitis sint neque temporibus nesciunt illum sapiente repudiandae aliquid. Cupiditate quis, iste sit veniam mollitia in nobis, quod tenetur labore aliquid maiores, cum repellat quo. Asperiores eveniet sunt repudiandae ab eaque tempora blanditiis quaerat necessitatibus error.
+                    </p>
+                </div>
+                <div id="tab3">
+                    <h2>JQUERY</h2>
+                    <img src="images/platform-logo-03.png" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, esse saepe incidunt tenetur praesentium iusto unde porro obcaecati aliquam, odit illo recusandae ullam necessitatibus vero similique reprehenderit quas quod repellendus laudantium dolore totam dignissimos hic. Fuga reprehenderit, hic cumque assumenda vel tempore officia iure corrupti nobis illo laudantium autem a quisquam. Autem optio veritatis nihil saepe esse accusantium hic totam aut ipsa commodi labore, debitis sint neque temporibus nesciunt illum sapiente repudiandae aliquid. Cupiditate quis, iste sit veniam mollitia in nobis, quod tenetur labore aliquid maiores, cum repellat quo. Asperiores eveniet sunt repudiandae ab eaque tempora blanditiis quaerat necessitatibus error.
+                    </p>
+                </div>
+                <div id="tab4">
+                    <h2>JAVASCRIPT</h2>
+                    <img src="images/platform-logo-04.png" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, esse saepe incidunt tenetur praesentium iusto unde porro obcaecati aliquam, odit illo recusandae ullam necessitatibus vero similique reprehenderit quas quod repellendus laudantium dolore totam dignissimos hic. Fuga reprehenderit, hic cumque assumenda vel tempore officia iure corrupti nobis illo laudantium autem a quisquam. Autem optio veritatis nihil saepe esse accusantium hic totam aut ipsa commodi labore, debitis sint neque temporibus nesciunt illum sapiente repudiandae aliquid. Cupiditate quis, iste sit veniam mollitia in nobis, quod tenetur labore aliquid maiores, cum repellat quo. Asperiores eveniet sunt repudiandae ab eaque tempora blanditiis quaerat necessitatibus error.
+                    </p>
+                </div>
+                <div id="tab5">
+                    <h2>CSS FRAMEWORKS</h2>
+                    <img src="images/platform-logo-05.png" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, esse saepe incidunt tenetur praesentium iusto unde porro obcaecati aliquam, odit illo recusandae ullam necessitatibus vero similique reprehenderit quas quod repellendus laudantium dolore totam dignissimos hic. Fuga reprehenderit, hic cumque assumenda vel tempore officia iure corrupti nobis illo laudantium autem a quisquam. Autem optio veritatis nihil saepe esse accusantium hic totam aut ipsa commodi labore, debitis sint neque temporibus nesciunt illum sapiente repudiandae aliquid. Cupiditate quis, iste sit veniam mollitia in nobis, quod tenetur labore aliquid maiores, cum repellat quo. Asperiores eveniet sunt repudiandae ab eaque tempora blanditiis quaerat necessitatibus error.
+                    </p>
+                </div>
+            </div>
+        </div><!--tab-inner"-->
+    </section>
+
+    <script>
+        $('.btn li').click(function(){
+            // 메뉴 부분
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+
+            //탭 부분
+            var result = $(this).attr('data-alt')
+            $('.tabs div').removeClass('active')
+            $('#' + result).addClass('active')
+        })
+    </script>
+</body>
+
+</html>

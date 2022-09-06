@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.item {
+    /* border: 1px solid red; */
+    width: 300px;
+    margin-bottom:10px;
+    position:relative;
+}
+/* .item input[type=text],   정석으로 불러오는 방식
+.item input[type=email],
+.item input[type=tel] {
+    border:1px solid lightgray;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding:10px;
+    padding-left:40px;
+    box-sizing: border-box;
+    outline: none;
+    
+} */
+.item input {
+    border:1px solid lightgray;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding:10px;
+    padding-left:55px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+    
+}
+.item .fa-solid {
+    position: absolute;
+    top:0;
+    left:0;
+    color:#fff;
+    background-color: gray;
+    border-radius: 5px 0 0 5px;
+    font-size:20px;
+    width:40px;
+    height: 40px;
+    /* border: 1px solid red; */
+    text-align: center;
+    line-height: 40px;
+    transition: 0.3s;
+}
+.item input:focus {
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+.item input:focus + .fa-solid{
+    background-color:dodgerblue;
+    color:#fff;
+}
+.item input:focus::placeholder {
+    visibility: hidden;
+}

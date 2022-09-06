@@ -1,0 +1,62 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+}
+body {
+  color:#222;
+  margin:0;
+  line-height: 1.6em;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+/* Table : Member */
+.member {
+    width: 900px;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.member caption {
+    font-size: 30px;
+    margin-bottom:30px;
+}
+.member tr {
+    border-bottom:1px solid #eee;
+}
+.member tr:last-child {
+    border-bottom:none;
+}
+.member tr:nth-child(odd) {
+    background-color: #eee;
+}
+.member th,td {
+    padding:12px;
+    text-align: center;
+}
+.member tr th {
+    background-color: dodgerblue;
+    color:#fff;
+}
+.member tr th:first-child {
+    border-radius: 5px 0 0 0;
+}
+.member tr th:last-child {
+    border-radius: 0 5px 0 0;
+}
+.member tr td:last-child {
+    color:crimson;
+}

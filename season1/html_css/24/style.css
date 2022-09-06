@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color:#222
+}
+.gnb {
+
+}
+.gnb a {
+    display: block;
+    position: relative;
+    padding-bottom:5px;
+    margin-bottom: 20px;
+}
+.gnb a:nth-child(1)::before {
+    content: '';
+    position:absolute;
+    background-color: crimson;
+    height: 2px;
+    width: 0;
+    bottom:0;
+    transition: 0.5s;
+}
+.gnb a:nth-child(1):hover::before {
+    width: 100%;
+}
+.gnb a:nth-child(2)::before {
+    content: '';
+    position:absolute;
+    background-color: crimson;
+    height: 4px;
+    width: 4px;
+    bottom:0;
+    transition: 0.5s;
+    left: 0;
+}
+.gnb a:nth-child(2):hover::before {
+    left: calc(100% - 4px);
+}
+.gnb a:nth-child(3)::before {
+    content: '';
+    position:absolute;
+    background-color: crimson;
+    height: 1px;
+    width: 0;
+    bottom:0;
+    transition: 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gnb a:nth-child(3):hover::before {
+    width: 100%;
+}
+.gnb a:nth-child(4)::before {
+    content: '';
+    position:absolute;
+    background-color: crimson;
+    height: 1px;
+    width: 100%;
+    bottom:0;
+    transition: 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gnb a:nth-child(4):hover::before {
+    width: 0;
+}

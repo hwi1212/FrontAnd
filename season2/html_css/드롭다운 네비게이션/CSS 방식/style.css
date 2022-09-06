@@ -1,0 +1,147 @@
+/* Google Web Font */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+  margin:0;
+  color:#333;
+  line-height: 1.5em;
+  font-size: 15px;
+}
+a {
+    text-decoration: none;
+    color:inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.program {
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    /* border: 1px solid #000; */
+    width: 1150px;
+}
+.inner h1 {
+    font-size:20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom:30px;
+}
+.inner h2 {
+    font-size:18px;
+}
+.items {
+    display: flex;
+    gap:40px;
+}
+.item {
+    flex:1;
+}
+.item-list {
+    text-align: center;
+    color:#fff;
+    padding:20px;
+}
+.item:nth-child(1) .item-list{
+    background-color: #195fab;
+}
+.item:nth-child(2) .item-list{
+    background-color: #5049a9;
+}
+.item:nth-child(3) .item-list{
+    background-color: #8c66c1;
+}
+
+.item-list h4{
+    font-weight: 300;
+}
+
+/* btn */
+.btns {
+
+}
+.btn {
+    background-color: #000;
+    color:#fff;
+    padding:5px;
+    margin:3px;
+    width: 80px;
+    display: inline-block;
+}
+.btn.download {
+    width: 200px;
+}
+
+/* Item-Desc */
+.item-desc {
+    padding:5px 15px;
+    font-size: 14px;
+}
+.item-desc p {
+    text-align: center;
+}
+.item-desc ul {
+    list-style: none;
+    margin:0;
+    padding:4px;
+    margin-bottom:15px;
+    background-color: #eee;
+}
+.item:nth-child(1) .item-desc {
+    border: 3px solid #195fab;
+}
+.item:nth-child(2) .item-desc {
+    border: 3px solid #5049a9;
+}
+.item:nth-child(3) .item-desc {
+    border: 3px solid #8c66c1;
+}
+.item-desc ul li {
+
+}
+.item-desc ul li::before {
+    content: '-';
+    margin-right: 5px;
+}
+
+/* Show Hide Function : Show Hide*/
+/* .item-desc {
+    display: none;
+}
+.item:hover .item-desc {
+    display: block;
+} */
+
+/* Show Hide Function : Show down*/
+/* .item-desc {
+    height: 0;
+    overflow: hidden;
+    padding:0;
+    transition: 0.5s;
+}
+.item:hover .item-desc {
+    height: 200px;
+    padding:5px 15px;
+} */
+
+/* 위 두가지 방법은 밑에 요소가 밀림,
+   밑에 요소가 있을 경우 저 방법 사용하면 안됨 */
+
+/* Show Hide Function : Position*/
+.item {
+    position: relative;
+}
+.item-desc {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+}
+.item:hover .item-desc {
+    display: block;
+}

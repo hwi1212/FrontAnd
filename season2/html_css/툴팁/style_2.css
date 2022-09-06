@@ -1,0 +1,70 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+}
+body {
+    margin:0;
+    background-color: #111;
+}
+a {
+    text-decoration: none;
+}
+
+.sns {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* border: 1px solid #fff;
+    width: 100%;
+    text-align: center; */
+}
+.sns a {
+    color:#fff;
+    margin:5px;
+    position: relative;
+}
+.sns a::before {
+    content: attr(data-text);
+    position: absolute;
+    top:-20px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #777;
+    color:#000;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 3px;
+    width: 60px;
+    height: 15px;
+}
+.sns a::after {
+    content: '';
+    background-color: #777;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top:-7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.sns a i {
+
+}
+
+/* hover Function*/ 
+.sns a::before,
+.sns a::after {
+    display: none;
+}
+.sns a:hover::before,
+.sns a:hover::after {
+    display: block;
+}

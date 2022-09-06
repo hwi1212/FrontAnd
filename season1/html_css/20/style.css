@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.tab-inner {
+    border: 1px solid red;
+    width: 300px;
+    height: 350px;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.slide {
+    position: relative;
+    width: 300px;
+    height: 300px; 
+    overflow: hidden;
+}
+.slide-inner {
+    width:900px;
+    font-size: 0; /* 이미지가 가지고 있는 마진값을 지워줌 (이미지 마진은 폰트로 해석함)*/
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+}
+.btn {
+    text-align: center;
+    margin-top: 10px;
+}
+.btn label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[id=tab1]:checked ~ .slide .slide-inner {
+    left:0;
+}
+input[id=tab2]:checked ~ .slide .slide-inner {
+    left:-300px;
+}
+input[id=tab3]:checked ~ .slide .slide-inner {
+    left:-600px;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1], 
+input[id=tab2]:checked ~ .btn label[for=tab2], 
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background-color: crimson;
+}
+
+.container {
+    display:grid;
+    width:600px;
+    grid-template-rows:repeat(3,100px);
+    grid-template-colums:repeat(3,1fr);
+    grid-template-areas:
+      "header header header"
+      "main . aside"
+      ". footer footer";
+  }

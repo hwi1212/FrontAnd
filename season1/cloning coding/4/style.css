@@ -1,0 +1,30 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+.heading {
+    font-size: 8em;
+    text-transform: uppercase;
+    margin:0;
+    /* background-color: #4158d0; */
+    background: linear-gradient(to right, #fbc2eb,#a6c1ee);
+    /* 크롬, 엣지 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    /* 파이어폭스 용*/
+    -moz-background-clip: text;
+    -moz-text-fill-color:transparent;
+}

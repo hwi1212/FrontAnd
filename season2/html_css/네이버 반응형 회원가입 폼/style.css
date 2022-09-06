@@ -1,0 +1,177 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  color:#222;
+  margin:0;
+  font-size: 14px;
+  background-color: #f5f6f7;
+  line-height: 1.5em;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+img{
+    border:0;
+    vertical-align:middle;	
+}
+  h1,h2,h3,h4,h5,h6 {
+  margin-top:0;
+}
+  ul,ol,li{
+    list-style:none;	
+    padding:0;
+}
+  input,select{
+    vertical-align:top;	
+    cursor: pointer;
+}
+
+/* Member Sign in*/
+.member {
+    width: 460px;
+    margin:auto;
+    padding:0 20px;
+}
+.member .logo {
+    height: 30px;
+    display: block;
+    margin:50px auto;
+}
+.field {
+    margin:10px 0;
+}
+.field b {
+    display: block;
+    font-weight: 600;
+    margin-bottom:5px
+}
+.member input:not(input[type=radio]), .member select {
+    border: 1px solid #dadada;
+    padding: 15px;
+    width: 100%;
+    margin-bottom:5px;
+    transition: 0.3s;
+}
+.member input[type=button],
+.member input[type=submit] {
+  background-color: #2db400;
+  color:#fff;
+}
+.member input:not(input[type=radio]):focus, .member select:focus {
+    border-color:#2db400;
+}
+.field.birth div {
+  display: flex;
+  gap:10px;
+}
+.field.tel-number div {
+  display: flex;
+  gap: 10px;
+  margin:5px 0;
+}
+.field.tel-number div input:nth-child(1){
+  flex: 2;
+}
+.field.tel-number div input:nth-child(2){
+  flex: 1;
+}
+.field.gender div {
+  border: 1px solid #dadada;
+  background-color: #fff;
+  padding:15px 5px;
+}
+.placehold-text {
+  display: block;
+  position: relative;
+}
+.placehold-text::before {
+  content: '@naver.com';
+  position: absolute;
+  right: 18px;
+  top:13px;
+  color:#bbb;
+  pointer-events: none;
+}
+.userpw {
+  background: url(images/icon-01.png) no-repeat center right 15px #fff;
+  background-size: 18px;
+}
+.userpw-confirm {
+  background: url(images/icon-02.png) no-repeat center right 15px #fff;
+  background-size: 18px;
+}
+.member-footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top:20px;
+}
+.member-footer div a:nth-of-type(2) {
+  font-weight: 600;
+}
+.member-footer div a::after {
+  content: '|';
+  font-size: 10px;
+  margin-right: 5px;
+  padding-left: 7px;
+  display: inline-block;
+  transform: translateY(-1px);
+}
+.member-footer div a:last-child::after {
+  display: none;
+}
+.member-footer a:hover {
+  text-decoration: underline;
+  color:#2db400;
+}
+/* custom Selcect */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url(images/icon-select.png) no-repeat center right 10px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* checked Radio button*/
+.field.gender input[name=gender] {
+  display: none;
+}
+.field.gender label {
+  cursor: pointer;
+  margin-right: 5px;
+}
+.field.gender label em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  transform: translateY(3px);
+  background: url(images/icon-radio.png) no-repeat;
+  background-position: left;
+  margin-right:3px;
+}
+.field.gender input[name=gender]:checked + em {
+  background-position: right;
+}
+
+@media (max-width:768px) {
+  .member {
+    width: 100%;
+  }
+}

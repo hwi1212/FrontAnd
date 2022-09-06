@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>if 조건문을 이용한 스크롤 후 헤더 디자인 변경</title>
+    <!--script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/eb6caddf9d.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="lnb-inner">LNB inner</div>
+            <div class="gnb-inner">GNB inner</div>
+        </header>
+        <section>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis qui hic eius quidem accusamus officia adipisci. Voluptatem soluta magni itaque sapiente, repellendus maiores! Quam, blanditiis perspiciatis? Nisi, iste? Nisi, earum? Eos minus est itaque eveniet quis esse optio, quasi necessitatibus amet illo sequi veritatis qui ratione laboriosam sint fugit sapiente quisquam quos ab saepe. Vitae mollitia incidunt doloremque vel eaque fugit ad omnis, blanditiis odio animi possimus nulla odit amet, labore iste. Id voluptates deserunt in, est minus odio! Veniam rem autem reiciendis explicabo, porro nulla voluptatibus cupiditate impedit eveniet nostrum perferendis harum quam tempora, minus, animi aspernatur corrupti?
+            </p>
+        </section>
+    </div>
+
+    <a class="btn-top" href="#none"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script>
+        /* Header Active Class */
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 50) { // 스크롤을 50px보다 많이 내렸다면
+                $('header, .btn-top').addClass('active')
+            }
+            else {
+                $('header, .btn-top').removeClass('active')
+            }   
+        })
+    </script>
+</body>
+
+</html>

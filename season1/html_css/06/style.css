@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 15px;
+    font-weight: 300;
+    background-color: #222;
+    color:#fff;
+}
+a {
+    text-decoration: none;
+}
+.items {
+    display: flex;
+}
+.item {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin: 10px;
+    position:relative;
+}
+.front, .back {
+    position:absolute;
+    transition: 0.5s;
+    top:0; /* 트랜지션을 위해 top 위치를 0으로 한 번 잡아줌*/
+}
+.front {
+    background-color: #333;
+    width: 100%;
+    height: inherit;
+    z-index: 1;
+}
+.front h2 {
+    margin-top:0;
+}
+.back {
+    background-color: #fff;
+    width: 100%;
+    height: inherit;
+    color: #222;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;  /* 초반에 화이트 배경이 살짝 보이는거 가려줌*/
+}
+.back a {
+    color: #fff;
+    background-color: darkorange;
+    padding:5px 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.back a:hover {
+    background-color: #333;
+}
+.item:hover .front {    
+    top:-50%;
+    /* transform: translateY(-50%); 
+    .front랑 .back에 top:0; 안잡아주고 트랜스폼으로 적용하면 트랜지션이 먹음
+    */
+}
+.item:hover .back {
+    top:50%;
+    opacity: 1;
+    /* transform: translateY(50%); */
+}
+
+@keyframes ani {
+    0%,100% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.item:hover .front img {
+    animation:ani 1s linear infinite;
+}

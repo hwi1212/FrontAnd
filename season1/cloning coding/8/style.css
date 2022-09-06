@@ -1,0 +1,43 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  /* 앵커가 페어링 되어 있는 곳을 스무드 시키겠다는 거
+  스크립트 없이도 충분히 가능하지만 IE에서 안됨
+  IE 고려하지 않거나 모바일에서만 사용한다면 이 속성 사용
+  (속도 조절 불가)
+  */
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding:10px;
+}
+
+header a {
+  background-color: teal;
+  color:#fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding:10px 20px;
+  display: inline-block;
+}
+p {
+  font-size:1.5em;
+  line-height: 2em;
+}
+.btn-gototop {
+  background-color: pink;
+  color:#fff;
+  text-decoration: none;
+  padding:10px 20px;
+  border-radius: 20px;
+}

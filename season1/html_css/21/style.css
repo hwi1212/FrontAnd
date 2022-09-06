@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tab-inner {
+    /* border: 1px solid green; */
+    height: 550px;
+}
+.tab-inner h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.tabs {
+    /* border: 1px solid red; */
+    width: 800px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.items {
+    width: 2400px;
+    height: 400px;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+}
+.items div {
+    /* border: 1px solid blue; */
+    width: 800px;
+    height: 400px;
+    float: left;
+    box-sizing: border-box;
+    padding:50px;
+}
+.btn {
+    text-align: center;
+}
+.btn label {
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.items div img {
+    width: 100px;
+    border-radius: 50%;
+}
+.items div p b {
+    display: block;
+}
+.items div p span {
+    color: orange;
+}
+
+input[id=tab1]:checked ~ .tabs .items{
+    left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items{
+    left: -800px;
+}
+input[id=tab3]:checked ~ .tabs .items{
+    left: -1600px;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    background-color: crimson;
+    border-radius: 50%;
+}

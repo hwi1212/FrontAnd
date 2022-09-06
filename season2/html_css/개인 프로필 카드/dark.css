@@ -1,0 +1,190 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+  box-sizing: border-box;
+}
+body {
+  color:#333;
+  margin:0;
+  background:url(images/svg-background.svg);
+  font-size: 15px;
+  line-height: 1.6em;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+
+.frame {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+}
+.profile {
+    width: 320px;
+    padding: 50px 30px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    position:  relative;
+    display: inline-block;
+    margin:20px;
+}
+
+/* Face */
+.face {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position: relative;
+}
+.face img {
+    width: 120px;
+    border-radius: 50%;
+    background-color: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+.face i {
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    font-size: 20px;
+    background-color: deepskyblue;
+    border-radius: 50%;
+    color:#fff;
+}
+.profile h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.profile h1 span {
+    display: block;
+    font-size: 13px;
+    color:#bbb;
+    text-transform: uppercase;
+    margin-top:10px;
+}
+.profile p {
+    margin-top:5px;
+    margin-bottom:10px;
+    line-height: 1.3em;
+}
+.profile p span {
+    display: block;
+    color:royalblue;
+}
+.view-portfolio {
+    background-color: #00cec9;
+    color:#fff;
+    padding:5px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    display: inline-block;
+    width: 180px;
+}
+
+/* SNS */
+.sns {
+    border-top: 1px solid #eee;
+    padding-top:30px;
+    margin-top:30px;
+}
+.sns div {
+    display: inline-block;
+    width: 30%;
+}
+.sns div i {
+    color:#fff;
+    width: 70px;
+    height: 70px;
+    font-size: 2.5em;
+    line-height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);;
+}
+.sns div:nth-child(1) i {
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+.sns div:nth-child(2) i {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+.sns div:nth-child(3) i {
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+}
+.sns div span {
+    font-size: 13px;
+    color:#bbb;
+    display: inline-block;
+    margin-top:5px;
+}
+.sns div span big {
+    display: block;
+    color:#333;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Top Button */
+.btn-mode,
+.like-more {
+    font-size: 18px;
+}
+.btn-mode {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:20px;
+    left: 20px;
+    cursor: pointer;
+}
+.btn-mode::before {
+    content: '\eb0f';
+    font-family: xeicon;
+}
+.like-more {
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+.btn-like {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.btn-like::before {
+    content: '\ea11';
+    font-family: xeicon;
+}
+.btn-more {
+    
+}
+
+/* Dark Mode*/
+.profile.dark {
+    background-color: #323650;
+}
+.profile.dark .btn-mode,
+.profile.dark .like-more {
+    color:#fff;
+}
+.profile.dark h1,
+.profile.dark p {
+    color:#fff;
+}
+.profile.dark .sns {
+    border-top: 1px solid #555;
+}
+
+.profile.dark .sns div span big {
+    color:#fff;
+}

@@ -1,0 +1,54 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+}
+body {
+    margin:0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip {
+    /* border: 1px solid red; */
+    position: relative;
+}   
+.tooltip .fa-circle-question {
+    font-size: 50px;
+    color:royalblue;
+}
+.tooltip span {
+    position: absolute;
+    top:-60px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color:#fff;
+    width: 250px;
+    border-radius: 3px;
+    padding:5px;
+    text-align: center;
+    /* display: none; */
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.tooltip span::after {
+    content: '';
+    position: absolute;
+    bottom:-5px;
+    left:50%;
+    transform:translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: #222;
+}
+.tooltip:hover span{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}

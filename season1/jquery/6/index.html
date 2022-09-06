@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>쇼핑몰 아이템 UI 호버 이펙트</title>
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/eb6caddf9d.js" crossorigin="anonymous">
+    </script>
+    <!--script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="item">
+        <img src="images/model-female.png" alt="">
+        <div class="detail">
+            <div class="title">
+                <h2><em>Nightgown</em> Women's Designer Wear</h2>
+                <span class="price">$55.99</span>
+            </div>
+            <div class="info">
+                <div class="size">
+                    <label>Sizes</label>
+                    <span>XS</span><span>S</span><span>M</span><span>L</span><span>XL</span>
+                </div>
+                <!--size-->
+                <div class="color">
+                    <label>Colors</label>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <!--color-->
+                <span class="like"></span>
+            </div>
+            <!--info-->
+            <button class="add-cart">Add to Cart</button>
+        </div>
+        <!--detail-->
+    </div>
+    <!--item-->
+
+    <script>
+        $('.size span, .color span').click(function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+        })
+        $('.like').click(function(){
+            $(this).toggleClass('active')
+        })
+    </script>
+</body>
+
+</html>

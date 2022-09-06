@@ -1,0 +1,47 @@
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+.custom {
+    margin-bottom: 100px;
+}
+.custom input[type=checkbox] {
+    display: none;
+}
+.custom label em {
+    /* border: 1px solid red; */
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle; /*인라인 요소끼리 중앙 정렬할때*/
+    margin-right: 5px;
+    background:url(images/checkbox-02.png) no-repeat;
+    background-position: left center;
+}
+.custom input[type=checkbox]:checked + label em{
+    background-position: right center;
+}   
+label {
+    cursor: pointer;
+}
+.grade input[type=radio] {
+    display: none;
+}
+.grade label em {
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background:url(images/radio-01.png) no-repeat;
+    background-position: left center;
+}
+.grade input[type=radio]:checked + label em {
+    background-position: right center;
+}
+.grade input[type=radio]:checked + label {
+    color:crimson;
+}

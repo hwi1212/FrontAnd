@@ -1,0 +1,106 @@
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  left: 1.6em;
+  font-weight: 300;
+  color: #fff;
+}
+a {
+    text-decoration: none;
+    color:gainsboro;
+}
+
+.faq {
+    height: 100vh;
+}
+.faq-inner {
+    width: 700px;
+    margin: auto;
+}
+.faq-inner h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+.accordion {
+    font-size: 26px;
+}
+.accordion .title,
+.accordion .content {
+    background-color: #303030;
+    padding:10px 15px;
+    margin-bottom:7px;
+}
+.accordion .title {
+    cursor: pointer;
+}
+.accordion .title::after {
+    content: '\e9c5';
+    font-family: xeicon;
+    float: right;
+    margin-top:5px;
+    transition: 0.3s;
+}
+.accordion .title.active {
+    background-color: #353b48;
+}
+.accordion .title.active::after {
+    transform: rotate(45deg);
+}
+.accordion .content {
+    display: none;
+}
+
+.newsletter {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin:auto;
+    text-align: center;
+    margin-top:30px;
+}
+.newsletter p{
+
+}
+.newsletter div {
+    display: flex;
+}
+.newsletter div input[type=email],
+.newsletter div button {
+    border:none;
+    outline: none;
+    height: 60px;
+    vertical-align: middle;
+    font-size:20px;
+}
+.newsletter div input[type=email]{
+    /* width:70%; */
+    flex:3;
+}
+.newsletter div button {
+    background-color: #e84118;
+    color:#fff;
+    cursor: pointer;
+    /* width: 30%; */
+    flex:1;
+    position: relative;
+}
+.newsletter div button::after {
+    content: '\e93f';
+    font-family: xeicon;
+    font-size: 30px;
+    position: absolute;
+    top:15px;
+    right:14px;
+}

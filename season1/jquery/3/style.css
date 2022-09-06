@@ -1,0 +1,41 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.star-rating {
+    background-color: #000;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    padding:5px;
+}
+.star-rating div {
+    float: left;
+    width: 50%;
+}
+.stars {
+    
+}
+.stars .fa-solid {
+    font-size: 18px;
+    color:#333;
+    cursor: pointer;
+}
+.stars .fa-solid.active {
+    color:yellow;
+    text-shadow: 0 0 5px yellow;
+}
+.print {
+    color:#fff;
+}
+.print img {
+    margin-top:-3px; /* vertical로 완벽하게 수직 정렬이 안돼서*/
+    vertical-align: middle;
+    margin-right: 5px;
+}

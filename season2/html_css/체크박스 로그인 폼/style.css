@@ -1,0 +1,202 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  font-family: Pretendard,-apple-system, Roboto, 'Noto Sans KR',  sans-serif;
+  box-sizing: border-box;
+}
+body {
+  color:#222;
+  margin:0;
+  font-size: 15px;
+  line-height: 1.6em;
+  background: url(images/background.png) no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
+/* Custom checkbox & radio login form */
+.login {
+  width: 430px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding:50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.login h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom:50px;
+}
+.login .field {
+  display: block;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top:15px;
+}
+
+/*  input[type=email,password] */
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom:1px solid #ddd;
+  padding-left:25px;
+  transition: 0.3s;
+  outline: none;
+}
+input[type=email]:focus,
+input[type=password]:focus {
+  border-color:#999;
+}
+input[type=email] {
+  background: url(images/icon-user.png) no-repeat center left 3px;
+}
+input[type=password] {
+  background: url(images/icon-password.png) no-repeat center left 3px;
+}
+input[type=email]::placeholder,
+input[type=password]::placeholder {
+  color:#aaa;
+  transition: 0.3s;
+  opacity: 1;
+  visibility: visible;
+}
+input[type=email]:focus::placeholder,
+input[type=password]:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Info*/
+.save-info {
+  margin:10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  /* overflow: hidden; */
+}
+.save-info label {
+  /* float: left; */
+}
+.save-info a {
+  /* float: right; */
+}
+.event-info {
+  text-align: center;
+  margin-top:30px;
+}
+.event-info label {
+  display: inline-block;
+  margin:5px;
+}
+.login input[type=button] {
+  display: block;
+  width: 100%;
+  padding:10px;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin:15px 0; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  color:#fff;
+  cursor: pointer;
+}
+.sns-info {
+  text-align: center;
+  margin:25px
+}
+.sns {
+  margin:10px 0;
+}
+.sns a i {
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  line-height: 45px;
+  background-color: red;
+  color:#fff;
+  margin:5px;
+  /* transition: 0.5s; */
+}
+/* .sns a i:hover {
+  transform: rotateY(360deg);
+} */
+.sns a:nth-child(1) i {
+  background-color: #dd4b39;
+}
+.sns a:nth-child(2) i {
+  background-color: #1877F2;
+}
+.sns a:nth-child(3) i {
+  background-color: #25d366;
+}
+.sns a:nth-child(4) i {
+  background-color: #ffdc00;
+}
+.signup-info {
+  text-align: center;
+}
+.signup-info span{
+  display: block;
+}
+.signup-info a {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.signup-info a:hover {
+  text-decoration: underline;
+}
+
+/* Custom Checkbox & Radio */
+input[id=save-email],
+input[name=event] {
+  display: none;
+}
+input[id=save-email] + em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right:5px;
+  background: url(images/icon-checkbox.png) no-repeat;
+  background-position: left;
+  /* 방법 1 */
+  /* vertical-align: middle;
+  margin-top:-2px; */
+  /* 방법 2*/
+  transform: translateY(5px);
+}
+input[id=save-email]:checked + em {
+  background-position: right;
+}
+input[name=event] + em {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right:5px;
+  background: url(images/icon-radio.png) no-repeat;
+  background-position: left;
+  transform: translateY(4px);
+}
+input[name=event]:checked + em {
+  background-position: right;
+}

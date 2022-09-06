@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>변수와 조건문 활용한 별점 주기</title>
+    <script src="https://kit.fontawesome.com/eb6caddf9d.js" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="star-rating">
+        <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="print">
+            별점 주실거죠?ㅎ
+        </div>
+    </div>
+
+    <script>
+        $('.stars .fa-solid').click(function () {
+            // 별점
+            $(this).addClass('active')
+            $(this).prevAll().addClass('active')
+            $(this).nextAll().removeClass('active')
+
+            // 별점 갯수에 따른 텍스트 변경
+            var num = $(this).index()
+            var starRate = num + 1
+            // $('.print').text(starRate) 테스트로 출력
+
+            // html 메서드를 쓴 이유 : 이미지 태그를 넣기 위해서, text로 쓰면 글자로 출력됨
+            if (starRate == 1) {
+                $('.print').html('<img src="images/star-lv1.png">' + '별로에요')
+            } 
+            else if (starRate == 2) {
+                $('.print').html('<img src="images/star-lv2.png">' + '보통이에요')
+            }
+            else if (starRate == 3) {
+                $('.print').html('<img src="images/star-lv3.png">' + '그냥 그래요')
+            }
+            else if (starRate == 4) {
+                $('.print').html('<img src="images/star-lv4.png">' + '맘에 들어요')
+            }
+            else {
+                $('.print').html('<img src="images/star-lv5.png">' + '아주 좋아요')
+            }
+        })
+    </script>
+</body>
+
+</html>

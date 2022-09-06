@@ -1,0 +1,130 @@
+/* Google Web Font */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    font-family: Pretendard, -apple-system, Roboto, 'Noto Sans KR', sans-serif;
+    color: #222;
+    margin:0;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.heading {
+    font-family: 'GmarketSansLight';
+    font-size: 66px;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin-bottom:10px;
+}
+.heading span {
+    color:deeppink;
+}
+
+/* Items */
+.items-inner {
+    width: 1350px;
+    margin:auto;
+}
+.items-inner h2 {
+    margin-left:10px ;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;  /* IE에서는 적용안됨*/
+    counter-reset: item-number;
+}
+.item {
+    /* width: 250px; */
+    flex:1;
+    position: relative;
+    counter-increment: item-number;
+}
+.item::before {
+    content: counter(item-number);
+    position:absolute;
+    width: 45px;
+    height: 45px;
+    background-color: gray;
+    z-index: 99;
+    border-radius: 0 0 10px 0;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 45px;
+    transition: 0.5s;
+}
+.item:hover::before {
+    background-color: crimson;
+}
+/* Photo */
+.photo {
+    position: relative;
+    height: 390px;
+}
+.photo a {
+
+}
+.photo a img {
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+.photo a img:first-child {
+    z-index: 1;
+}
+.photo a img:last-child {
+    
+}
+.photo:hover img:first-child {
+    opacity: 0;
+}
+
+/* Detail */
+.detail {
+    position: relative;
+}
+.detail span {
+    display: block;
+}
+.detail .price b{
+    color:crimson;
+    margin-right: 10px;
+}
+.detail .name {
+    font-weight: 500;
+}
+.detail .count {
+    color:#777;
+}
+.detail .like {
+    position:absolute;
+    right:8px;
+    top:5px;
+    cursor: pointer;
+}
+.detail .like::before {
+    content: '\f08a';
+    font-family: fontawesome;
+    font-size: 18px;
+    color:#999;
+}
+.detail .like.active::before {
+    content: '\f004';
+    font-family: fontawesome;
+    font-size: 18px;
+    color:crimson;
+}
